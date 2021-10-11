@@ -7,3 +7,5 @@ https://github.com/trantansang/fabric-transaction
 yarn install
 yarn start
 ```
+# Postman
+https://www.postman.com/collections/0c084058226bd0483d88
