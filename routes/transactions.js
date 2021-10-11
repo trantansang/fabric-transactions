@@ -16,6 +16,17 @@ router.post('/', async (req, res, next) => {
             message: 'Missing user id'
         });
     }
+    if (!data['amount']) {
+        return res.status(400).send({
+            message: 'Missing amount'
+        });
+    }
+    if(data['amount'] <= 0){
+        return res.status(400).send({
+            message: 'Amount is invalid'
+        });
+    }
+    // Create transaction
     try {
         let transaction = await Transaction.add(data);
         return res.send({...transaction});
