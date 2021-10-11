@@ -7,5 +7,6 @@ client.on("error", function (error) {
 module.exports = {
     'hgetall': promisify(client.hgetall).bind(client),
     'hmset': promisify(client.hmset).bind(client),
+    'hset': promisify(client.hset).bind(client),
     'keys': promisify(client.keys).bind(client),
 }
